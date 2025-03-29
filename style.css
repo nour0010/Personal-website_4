@@ -187,6 +187,13 @@ margin: 20px;
        padding: 10px;
      }
      @media(max-width:994px){
+       
+        .navbar ul{
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+        }
+       
         .Who_am_I{
   
             width: 100%;
