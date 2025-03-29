@@ -1,0 +1,250 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Madimi One", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+}
+body{
+    background-color: rgb(187, 30, 30);
+    
+}
+.container{
+    height: 683px;
+    background: black;
+    margin: 10px;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.navbar{
+    width: 97%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin:0 20px;
+    padding: 20px 0;
+    
+}
+.logo{
+    font-size: 35px;
+}
+.navbar ul{
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+}
+.navbar ul li{
+    list-style: none;
+    cursor: pointer;
+    padding: 10px;
+    border: 4px solid transparent;
+    transition: .5s;
+}
+.navbar ul li:hover{
+    border: 4px solid red;
+    border-radius: 20px;
+}
+.Who_am_I{
+  
+  width: 100%;
+  height: 87.8%;
+  display: flex;
+  justify-content:  space-around;
+  align-items: center;
+  transition: 1s;
+  animation: open 1s ease-in-out forwards; 
+  
+  opacity: 0;
+}
+.Who_am_I i{
+    color: white;
+    margin: 5px;
+    font-size: 25px;
+}
+
+.My_information{
+width: 600px;
+transition: 1s;
+margin: 20px;
+}
+.My_information h2{
+    padding: 10px;
+    font-size: 35px;
+}
+.My_information h2 span{
+    color:rgb(255, 0, 0) ;
+}
+.My_information p{
+    width: 560px;
+}
+.My_picture {
+    width: 300px;
+    height: 98%; /* تأكد من أن العنصر يحتوي على مساحة كافية */
+    border-radius: 20px;
+    background-color: rgb(206, 17, 17);
+    position: relative; /* لجعل العناصر الداخلية تأخذ مرجعها من هذا العنصر */
+    display: flex;
+    justify-content: center; /* توسيط العناصر أفقياً */
+    align-items: center; /* توسيط العناصر عمودياً */
+    left: 0px;
+    transition: 1s;
+    
+}
+
+
+.circle {
+    width: 260px; /* حجم الدائرة */
+    height: 260px;
+    background-color: rgba(0, 0, 0, 0.5); /* لون مع شفافية */
+    border-radius: 50%;
+    position: absolute;
+    top: 56%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* محاذاة الدائرة إلى المنتصف */
+    z-index: 1; /* خلف الصورة */
+}
+
+.profile_picture {
+    width: 200px; /* حجم الصورة */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* توسيط الصورة */
+    z-index: 2; /* فوق الدائرة */
+}
+.about ,.MyWorks{
+    width: 100%;
+    height: 87.4%;
+    border-radius: 20px;
+    
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    overflow: auto;
+    transition: 1s;
+}
+.about div{
+    width: 400px;
+    height: 200px;
+    text-align: center;
+    background-color: rgb(215, 34, 34);
+    padding: 10px;
+    border-radius: 20px; 
+    animation: open 1s ease-in-out forwards; 
+    opacity: 0;
+}
+
+@keyframes open{
+    0%{
+        translate: 0px 90px;
+    }
+    100%{
+        opacity: 1;
+       
+    }
+}
+.about div h2{
+    margin: 10px;color: black;
+}
+.about div p{
+    background-color: rgb(163, 17, 17);
+    height: 60%;
+    padding: 10px;
+    border-radius: 20px;
+}
+.MyWorks a{
+    width: 400px;
+    text-align: center;
+    background-color: rgb(215, 34, 34);
+    padding: 10px;
+    border-radius: 20px; 
+    animation: open 1s ease-in-out forwards; 
+    opacity: 0;
+}
+.MyWorks a div{
+    border-radius: 20px;
+        height: 150px;
+        background-color: rgb(103, 10, 10);
+     }
+     .MyWorks a div img{
+        object-fit: cover;
+        border-radius: 20px ;
+        width: 100%;
+        height: 150px;
+     }
+     .MyWorks a p{
+        background-color: rgb(163, 17, 17);
+        border-radius: 20px;
+       padding: 10px;
+     }
+     @media(max-width:994px){
+        .Who_am_I{
+  
+            width: 100%;
+            height: 87.8%;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content:  space-around;
+            align-items: center;
+            transition: 1s;
+            animation: open 1s ease-in-out forwards; 
+            
+            opacity: 0;
+          }
+          .My_information{
+            text-align: center;
+            width: 100%;
+            transition: 1s;
+            }
+            .My_information h2{
+                padding: 10px;
+                font-size: 35px;
+            }
+            .My_information p{
+               margin: auto;
+                width: 80vw;
+                margin-bottom: 20px;
+            }
+            .My_picture {
+                width: 250px;
+                height: 98%; /* تأكد من أن العنصر يحتوي على مساحة كافية */
+                border-radius: 20px;
+                background-color: rgb(206, 17, 17);
+                position: relative; /* لجعل العناصر الداخلية تأخذ مرجعها من هذا العنصر */
+                display: flex;
+                justify-content: center; /* توسيط العناصر أفقياً */
+                align-items: center; /* توسيط العناصر عمودياً */
+                left: 0px;
+                transition: 1s;
+                
+            }
+            .circle {
+                width: 200px; /* حجم الدائرة */
+                height: 200px;
+                background-color: rgba(0, 0, 0, 0.5); /* لون مع شفافية */
+                border-radius: 50%;
+                position: absolute;
+                top: 56%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* محاذاة الدائرة إلى المنتصف */
+                z-index: 1; /* خلف الصورة */
+            }
+            
+            .profile_picture {
+                width: 150px; /* حجم الصورة */
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%); /* توسيط الصورة */
+                z-index: 2; /* فوق الدائرة */
+            }
+     }
